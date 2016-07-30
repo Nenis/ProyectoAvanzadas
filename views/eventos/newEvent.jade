@@ -1,0 +1,59 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    title WSM Events
+    link(rel='stylesheet', href='../css/new.css')
+    link(rel='stylesheet', type='text/css', href='../css/accordion.css')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css',rel='stylesheet')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css', rel='stylesheet')
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Montserrat|")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js") 
+    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+    script(scr="../js/insert.js")
+  body(style="background.color: #fff !important;")
+    script.
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    header#main-header
+      a#logo-header(href='http://localhost:8080/')
+        span.site-name 
+          i.fa.fa-home
+          |  WSM Events
+        span.site-desc Bringing the Party to you
+    div(class="container")
+      div(class="col-md-6")
+        h2 Agregar Información
+        
+        form(method="post" action="/eventos" style="margin-top:1.5em;"  name="formulario")
+          div(class = "form-group")
+            label Nombre completo:
+            input(type="text" name="nombre" placeholder="Ingrese su nombre" class="form-control" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}")
+          div(class = "form-group")
+            label Correo Electrónico:
+            input(type="email" name="correo" placeholder="Ej: example@dom.com" class="form-control"
+            required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" )
+            br
+          div(class = "form-group") 
+            h4 Ingrese sus preferencias:
+            label Comida:
+            input(type="text" name="comida" placeholder="Ej: Hamburguesa,Pizza,etc" class="form-control" data-toggle="tooltip" title="Separe las comidas con una coma.")
+          div(class = "form-group" style="margin-top:1em;" )
+            label Géneros Musicales:
+            input(type="text" name="musica" placeholder="Ej: Pop,Rock,etc" class="form-control" data-toggle="tooltip" title="Separe sus gustos musicales con una coma.")
+          div(class = "form-group")
+            label Pasatiempos:
+            input(type="text" name="pasatiempos" placeholder="Ej: Bailar,Caminar,etc" class="form-control" data-toggle="tooltip" title="Separe sus pasatiempos favoritos con una coma.")
+          div(class="form-group text-right")
+            input(type="submit" class="btn btn-info" value="Aceptar")
+      div(class = "col-md-6 center-block")
+        figure
+          img(src="../img/party.jpg" style="margin-top:4em; margin-left:2em;")
+      
+
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
+
+

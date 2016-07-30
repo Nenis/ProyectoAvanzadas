@@ -1,0 +1,53 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title WSM Events
+    link(rel='stylesheet', type='text/css', href='../css/default.css')
+    link(rel='stylesheet', type='text/css', href='../css/component.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js") 
+    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+    script(src='../js/couch.js')
+    script(src='../js/modernizr.custom.js')
+  body(style='background-image: url(../img/fiesta.png);')
+    #modal-7.md-modal.md-effect-7
+      .md-content
+        a.md-close(href='#', style='margin-left:2px;')
+          i.fa.fa-times-circle.fa-lg(style='margin-top: 7px;margin-bottom: 7px; margin-left: 7px;')
+        h3 WSM Events
+        div
+          p Administración WSM Events
+          p
+            | Consultar datos de clientes, comidas, pasatiempos y mucho más. Para consultar los datos complete la siguiente información:
+          table
+            tbody
+              tr
+                th
+                  strong Nombre de usuario: 
+                th
+                  input#user(style='margin-left:1em;', type='text', name='info')
+              tr
+                th
+                  strong Contraseña :
+                th
+                  input#pass(type='password', style='margin-left:1em;', name='info')
+          br
+          button.g(onclick="ingresar()") Ingresar
+    .container(style='background-image: url(../img/fiesta.png)')
+      .codrops-top.clearfix
+        a(href='#') .
+      header
+        h1
+          | WSM Events
+          span Bringing the Party to you
+      .main.clearfix
+        .column
+          button.md-trigger(data-modal='modal-7') Consultar
+          button(onclick="direct()") Ingresa tus datos
+      .md-overlay
+
+      script(src='../js/classie.js')
+      script(src='../js/modalEffects.js')

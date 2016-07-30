@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title WSM Events
+    link(rel='stylesheet', href='../css/estilos.css')
+    link(rel='stylesheet', type='text/css', href='../css/accordion.css')
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand|Montserrat|")
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+    link(href='../css/simple-sidebar.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js") 
+    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+  body
+    #wrapper
+      // Sidebar
+      #sidebar-wrapper
+        ul.sidebar-nav
+          li.sidebar-brand
+             a(href='./index' style="color:#C17617;") WSM Events
+          li
+            a(href='consult/consulta1')
+              i(style="color:#C17617;").fa.fa-user.fa-lg
+              |   Buscar cliente
+          li
+            a(href='consult/consulta2') 
+              i(style="color:#C17617;").fa.fa-users.fa-lg
+              |   Buscar clientes por pasatiempo
+          li
+            a(href='consult/consulta3') 
+              i(style="color:#C17617;").fa.fa-futbol-o.fa-lg
+              |   Pasatiempos
+          li
+            a(href='consult/consulta4')
+              i(style="color:#C17617;").fa.fa-headphones.fa-lg 
+              |   Gustos musicales
+          li
+            a(href='consult/consulta5')
+              i(style="color:#C17617;").fa.fa-music.fa-lg 
+              |   Preferencias Géneros musicales
+          li
+            a(href='consult/consulta6')
+              i(style="color:#C17617;").fa.fa-cutlery.fa-lg 
+              |   Lista de todas las comidas
+          li
+            a(href='consult/consulta7')
+              i(style="color:#C17617;").fa.fa-coffee.fa-lg 
+              |   Preferencias Comida
+          li
+            a(href='#' style=" font-size: 17px; color:#fff; background: rgba(190,132,7,0.1);")
+              i(style="color:#C17617;").fa.fa-align-left.fa-lg 
+              |   Registro de conteo general
+          li
+            a(href='comidas')
+              i(style="color:#C17617; margin-left:2em;").fa.fa-align-left.fa-lg 
+              |   Comidas
+          li
+            a(href='musica')
+              i(style="color:#C17617; margin-left:2em;").fa.fa-align-left.fa-lg 
+              |   Gustos Musicales
+          li
+            a(href='pasatiempos')
+              i(style="color:#C17617; margin-left:2em;").fa.fa-align-left.fa-lg 
+              |   Pasatiempos
+      #page-content-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==', crossorigin='anonymous')
